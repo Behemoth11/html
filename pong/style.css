@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#table {
+    width: 50em;
+    margin: auto;
+    height: 30em;
+    background-color: black;
+}
+
+.glider {
+    width: 1em;
+    height: 5em;
+    background-color: rgb(255, 120, 120);
+}
+
+.ball {
+    padding: 10px;
+    width: 1em;
+    height: 1em;
+    width: min-content;
+    border-radius: 100%;
+    background-color: red;
+}
+
+#scene{
+    background-color: black;
+    margin: auto;
+}
