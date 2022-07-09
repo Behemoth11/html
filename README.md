@@ -138,10 +138,12 @@ Your `projects.html` file should now look like the following:
 </html>
 ```
 
-The main page `index.html` page should look similar to this:
+The main page `index.html` page should look similar to this:  
+
 ![index page screenshot](material/lesson-end-screen-shot-index-page.png)
 
-The project page `project.html` page should look similar to this:
+The project page `project.html` page should look similar to this:  
+
 ![project page screenshot](material/lesson-end-screen-shot-project-page.png)
 
 <p align="center"> 彡(ノ^ ^)ノ Congratulations ヘ(^ ^ヘ)☆彡.</p>
