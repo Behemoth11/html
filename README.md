@@ -78,4 +78,4 @@ Old url:
 New url:
 ![new url](material/screenshot-new-projects-path-.png)
 
-<div style="text-align: center; font-size: 2em; "> 彡(ノ^ ^)ノ Congratulations ヘ(^ ^ヘ)☆彡.</div>
+<p align="center"> 彡(ノ^ ^)ノ Congratulations ヘ(^ ^ヘ)☆彡.</p>
