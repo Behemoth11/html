@@ -1,149 +1,117 @@
-# Tutorial level 2
+# Tutorial level 3
 
-Hello, this is the second lesson of the tutorial to transform your single webpage into a complete website.
+Hello, this is the Third lesson of the tutorial to transform your single webpage into a complete website.
 
 ## What we will be doing
 
-In the last page lesson we created a new web page. While we could navigate between the two pages by changing the url. Its would be more convenient to be able to navigate using button.
+In the last lesson, we learned how to connect `index.html` and `projects.html` and go back and forth between the two. Our `projects.html` is completely blank for now.
 
-In this tutorial, we learn how to connect our two pages `index.html` and `projects.html` and go back and fourth between the two.
+Let's add some project to our `project.html`.
 
 ## Steps
 
-Follow the following steps to complete this level of the tutorial.
+Follow the steps to complete this level of the tutorial.
 
 ### Step 1
 
-Let's first connect the main page in `index.html` to the project page in `projects.html`. Do do so locate the navigation bar in `<nav>`. Its the first tag under body. Add the following code inside the tag:
+Let's create a `<main>` tag that will contain most of our code. Locate the closing `</nav>` tag inside your `projects.html`. Add a `<main>` element after the closing `</nav>` tag. Give it a class of "global-container".
+
+Your `projects.html` should now be similar to this :
 
 ```html
-<!-- some code -->
-<nav class="global-container header">
-  <a class="current">Home</a>
-  <a class="">Project</a>
-</nav>
-<!-- rest of the code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css"></link>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="global-container header">
+        <a class="current" href="./index.html">Home</a>
+        <a class="">Project</a>
+    </nav>
+    <main class="global-container" ></main> <!-- New piece of code-->
+</body>
+</html>
 ```
 
-Make sure to save your code. You should now see a link to project in the nav close to home. You web page should look similar to this.
-
-![page with project link added](material/page-with-project-added.png)
+We use the `<main>` tag to tell the browser that its content is the main focus of the document.
 
 ### Step 2
 
-You may have noticed that clicking on the project link does nothing. What makes anchor tags `<a>` is the [href](https://www.w3schools.com/tags/att_a_href.asp) [attribute](https://www.w3schools.com/html/html_attributes.asp).  
-Let's add a href attribute to the new link so that it goes to the `projects.html` after its clicked.
-
-Locate the project anchor tag inside your html. Add an href attribute with value `./projects.html`.
+Inside the `<main>` tag, create add a `<h1>` with text telling us what the page is about. Then create a `<h2>` with the name of the first project you want to showcase. The code inside your body element should now be similar to the following.
 
 ```html
-<!-- some code -->
-<nav class="global-container header">
-  <a class="current">Home</a>
-  <a class="" href="./projects.html">Project</a>
-</nav>
-<!-- some more code -->
+<!-- Some code -->
+<body>
+    <nav class="global-container header">
+        <a class="current" href="./index.html">Home</a>
+        <a class="">Project</a>
+    </nav>
+    <main class="global-container" >
+        <h1>The following is a showcase of my projects</h1>
+
+        <h2>Really cool scratch game</h2>
+    </main> <!-- New piece of code-->
+</body>
+<!-- Some more code -->
 ```
-
-> Note the `./` before `projects.html`. Make sure to add it as well, if you want your web page to work once uploaded to github.
-
-Clicking on the project link should now direct you to your projects.html page. If not make sure that the filename `projects.html`, the href attribute and the href value `./projects.html` where typed in properly.
 
 ### Step 3
 
-In this step we will link the `projects.html` page to the `index.html` page.  
-Let's first copy the `index.html` navigation code ( the code inside the `<nav>` tag ) to `projects.html`.
+Let's now add an image to showcase our project - Show don't tell : ).  
+To do so, save a ![screenshot](https://youtu.be/tirNbkEXZII) of your project into the root of the project ( directory/folder with the `index.html` ). Your root directory should now look similar to the following:  
 
-Your `projects.html` should now look like the following.
+![Current folder structure screenshot ](material/image-added-preview.png)
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css"></link>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav class="global-container header">
-        <a class="current">Home</a>
-        <a class="" href="./projects.html" >Project</a>
-    </nav>
+### Step 4
 
-</body>
-</html>
-```
+Let's add our new image to our `projects.html`. To do so, we add an image tag `<img>` after the last `<h2>`, then set it's `src` attribute to name of our image.
 
-Take some time to think of how to make your browser navigate to `index.html` when home is clicked.
-Waiting ..., waiting ..., Time almost done
-
-Let's make some changes so that the Home anchor tag ( link ) directs to the home files.
-Add a href attribute to the Home anchor tag so it links to `./index.html`.
-
-your code should now look similar to this :
+The code inside `projects.html` should now look similar to the following.  
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css"></link>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<!-- Some code -->
 <body>
     <nav class="global-container header">
-        <!-- node the new href inside the following a tag -->
-        <a class="current" href="./index.html" >Home</a>
-        <a class="" href="./projects.html" >Project</a>
+        <a class="current" href="./index.html">Home</a>
+        <a class="">Project</a>
     </nav>
+    <main class="global-container" >
+        <h1>The following is a showcase of my projects</h1>
 
+        <h2>Really cool scratch game</h2>
+        
+         <img src="./preview-of-my-first-project.png" />
+    </main> <!-- New piece of code-->
 </body>
-</html>
+<!-- Some more code -->
 ```
 
-> Note the `./` before `index.html`. Make sure to add it as well, if you want your web page to work once uploaded to github.
+Your live preview should now show something similar to the following.  
 
-You should now be able to navigate back and forth between `index.html` and `projects.html`.
+![Image source added preview](material/image-src-added-preview.png)
 
-### Step 4 ( Bonus )
+### Step 5
 
-You may have noticed that the href to `./projects.html` inside the `projects.html` file does nothing since we are already on the `projects.html` page when we click on the link.
+Let's make our page look a lot prettier with some css. Copy and paste the following code inside your `projects.html`.
 
-Go ahead and remove the href attribute from the project link **only** inside the **`projects.html`** file.
+```css
+img {
+    /* The biggest an image can ever be is 100%. That is that the image can never bigger than its container */
+    max-width: 100%;
+}
 
-Your `projects.html` file should now look like the following: 
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css"></link>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav class="global-container header">
-        <!-- node the new href inside the following a tag -->
-        <a class="current" href="./index.html" >Home</a>
-        <a class="" >Project</a>
-    </nav>
-
-</body>
-</html>
+h1, h2 {
+    margin-top: 2em;
+}
 ```
 
-The main page `index.html` page should look similar to this:  
+Your web browser should now show something similar to the following :  
 
-![index page screenshot](material/lesson-end-screen-shot-index-page.png)
-
-The project page `project.html` page should look similar to this:  
-
-![project page screenshot](material/lesson-end-screen-shot-project-page.png)
+![Web browser image preview](material/css-added-preview.png)
 
 <p align="center"> 彡(ノ^ ^)ノ Congratulations ヘ(^ ^ヘ)☆彡.</p>

@@ -160,3 +160,12 @@ img {
     border-top : 2px rgb(237, 229, 80) solid;
     width: fit-content;
 }
+
+img {
+  /* The biggest an image can ever be is 100%. That is that the image can never bigger than its container */
+  max-width: 100%;
+}
+
+h1, h2 {
+  margin-top: 2em;
+}
